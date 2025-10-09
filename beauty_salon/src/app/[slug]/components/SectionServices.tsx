@@ -2,17 +2,8 @@
 
 import { ContactInfo, LandingPage } from "@prisma/client";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Scissors,
-  Sparkles,
-  Twitter,
-  Whatsapp,
-  X,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -54,6 +45,7 @@ const services = [
 ];
 
 const SectionServices = ({ contact, landingpage }: SectionServicesProps) => {
+  console.log({ contact, landingpage });
   return (
     <section className="bg-gradient-to-br from-rose-50 to-pink-50 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -81,8 +73,10 @@ const SectionServices = ({ contact, landingpage }: SectionServicesProps) => {
               className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={service.image}
+                  width={400}
+                  height={300}
                   alt={service.title}
                   className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />

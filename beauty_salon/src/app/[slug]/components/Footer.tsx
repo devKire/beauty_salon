@@ -10,9 +10,6 @@ import {
   MessageCircle,
   Phone,
   Scissors,
-  Sparkles,
-  Twitter,
-  X,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";

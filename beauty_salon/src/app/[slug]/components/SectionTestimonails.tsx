@@ -2,18 +2,8 @@
 
 import { ContactInfo, LandingPage } from "@prisma/client";
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Scissors,
-  Sparkles,
-  Star,
-  Twitter,
-  Whatsapp,
-  X,
-} from "lucide-react";
-import Link from "next/link";
+import { Star } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 interface SectionTestimonailsProps {
@@ -49,6 +39,7 @@ const SectionTestimonails = ({
   contact,
   landingpage,
 }: SectionTestimonailsProps) => {
+  console.log({ contact, landingpage });
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -82,10 +73,14 @@ const SectionTestimonails = ({
                   />
                 ))}
               </div>
-              <p className="mb-6 text-gray-700 italic">"{testimonial.text}"</p>
+              <p className="mb-6 text-gray-700 italic">
+                {`"${testimonial.text}"`}
+              </p>
               <div className="flex items-center space-x-3">
-                <img
+                <Image
                   src={testimonial.image}
+                  width={48}
+                  height={48}
                   alt={testimonial.name}
                   className="h-12 w-12 rounded-full object-cover"
                 />

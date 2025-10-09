@@ -1,18 +1,8 @@
 "use client";
 
 import { ContactInfo, LandingPage } from "@prisma/client";
-import { AnimatePresence,motion } from "framer-motion";
-import {
-  Facebook,
-  Instagram,
-  Menu,
-  MessageCircle,
-  Scissors,
-  Sparkles,
-  Twitter,
-  Whatsapp,
-  X,
-} from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, Scissors, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";

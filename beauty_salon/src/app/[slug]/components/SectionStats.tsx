@@ -2,20 +2,7 @@
 
 import { ContactInfo, LandingPage } from "@prisma/client";
 import { motion } from "framer-motion";
-import {
-  Award,
-  Facebook,
-  Heart,
-  Instagram,
-  MessageCircle,
-  Scissors,
-  Sparkles,
-  Twitter,
-  Users,
-  Whatsapp,
-  X,
-} from "lucide-react";
-import Link from "next/link";
+import { Award, Heart, Users } from "lucide-react";
 import React from "react";
 
 interface SectionStatsProps {
@@ -30,6 +17,7 @@ const stats = [
 ];
 
 const SectionStats = ({ contact, landingpage }: SectionStatsProps) => {
+  console.log({ contact, landingpage });
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

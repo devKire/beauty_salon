@@ -2,17 +2,7 @@
 
 import { ContactInfo, LandingPage } from "@prisma/client";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Scissors,
-  Sparkles,
-  Twitter,
-  Whatsapp,
-  X,
-} from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -22,6 +12,7 @@ interface SectionHeroProps {
 }
 
 const SectionHero = ({ contact, landingpage }: SectionHeroProps) => {
+  console.log({ contact, landingpage });
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50"></div>

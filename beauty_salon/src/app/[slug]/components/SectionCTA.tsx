@@ -2,17 +2,7 @@
 
 import { ContactInfo, LandingPage } from "@prisma/client";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Scissors,
-  Sparkles,
-  Twitter,
-  Whatsapp,
-  X,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -21,7 +11,7 @@ interface SectionCTAProps {
   landingpage: Pick<LandingPage, "name">;
 }
 
-const SectionCTA = ({ contact, landingpage }: SectionCTAProps) => {
+const SectionCTA = ({ contact }: SectionCTAProps) => {
   return (
     <section className="bg-gradient-to-r from-rose-500 to-pink-500 py-20">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
